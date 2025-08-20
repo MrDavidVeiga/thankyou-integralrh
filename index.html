@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -14,26 +14,27 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       color: #333;
+      background-color: #f5f5f5;
     }
     .container2 {
-      border-top : 20px solid #002B5A;
-      border-radius : 20px;
+      border-top: 20px solid #002B5A;
+      border-radius: 20px;
       background-color: #fff;
       text-align: center;
-      padding: 40px;
+      padding: 40px 20px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       width: 90%;
       max-width: 500px;
     }
     h1 {
-      font-size: 24px;
+      font-size: 1.5rem;
       font-weight: 600;
       margin-bottom: 20px;
     }
     p {
-      font-size: 16px;
+      font-size: 1rem;
       margin-bottom: 30px;
     }
     img {
@@ -41,40 +42,60 @@
       margin-bottom: 20px;
     }
 
-    /* Estilos do botão personalizados */
+    /* Estilos do botão */
     .buttonsform {
       list-style: none;
       padding: 0;
       margin: 0 auto;
     }
 
-    .buttonsform li {
-      margin-bottom: 1rem;
-    }
+.buttonsform {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;   /* centra os filhos */
+}
 
-    .buttonsform li a {
-      display: inline-block;
-      width: 20rem;
-      height: 3.375rem;
-      line-height: 3.375rem;
-      padding: 0 0.5rem;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1em;
-      font-weight: 400;
-      border-radius: 0.75rem;
-      box-shadow: 0rem 0.5rem 1.625rem 0rem rgba(0, 0, 0, 0.369);
-      text-align: center;
-      text-decoration: none;
-      white-space: nowrap;
-      color: #FFFFFF;
-      background-color: #002D5D;
-      transition: color 0.375s ease, background-color 0.375s ease, border-color 0.375s ease;
-    }
+.buttonsform li {
+  display: flex;
+  justify-content: center;   /* centra o <a> dentro do <li> */
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.buttonsform li a {
+  display: inline-block;
+  width: min(100%, 320px);   /* ocupa até 320px e fica centralizado */
+  margin: 0 auto;            /* garante centrado se perder o flex */
+  height: 3.375rem;
+  line-height: 3.375rem;
+  padding: 0 0.75rem;
+  text-align: center;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.5rem 1.625rem rgba(0,0,0,.25);
+  color: #fff;
+  background: #002D5D;
+  text-decoration: none;
+  transition: .3s ease;
+}
 
     .buttonsform li a:hover {
       background-color: #7F96AE;
     }
 
+    /* Responsividade extra para telas muito pequenas */
+    @media (max-width: 400px) {
+      h1 {
+        font-size: 1.25rem;
+      }
+      p {
+        font-size: 0.9rem;
+      }
+      img {
+        width: 50px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -90,5 +111,3 @@
   </div>
 </body>
 </html>
-
-
